@@ -14,7 +14,7 @@ enum {
   // ...
 };
 
-
+#include <unistd.h>
 #include <mach/mach.h>
 //#include <Carbon/Carbon.h>
 #include <IOKit/IOKitLib.h>
@@ -189,10 +189,18 @@ void setKeyboardBrightness(float in)
 int
 main(int argc, char **argv)
 {
-  float setb;
-  if (argc > 1 && sscanf(argv[1], "%f", &setb) == 1) {
-    setKeyboardBrightness(setb);
-  }
-    printf("%f", getKeyboardBrightness());
+    float x;
+    float setb;
+    /**
+    if (argc > 1 && sscanf(argv[1], "%f", &setb) == 1) {
+        setKeyboardBrightness(setb);
+    }**/
+    for (int i = 0; i < 10; i++) {
+        x += 0.1;
+        usleep(100000);
+        printf("%s", "\tSleeping\n");
+        setKeyboardBrightness(x);
+        printf("%f", getKeyboardBrightness());
+    }
   exit(0);
 }
