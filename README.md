@@ -1,3 +1,12 @@
+Disclaimer
+==========
+
+Este codigo solo tiene fines educativos y de pruebas. Asi que no debes usarlo a menos que èste sea tu objetivo.
+
+La aplicacion original se encuentra en:
+
+http://www.keindesign.de/stefan/Web/Sites/iWeb/Site/iSpazz.html
+
 macbook-brightness
 ==================
 
